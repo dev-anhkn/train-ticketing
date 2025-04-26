@@ -1,0 +1,4 @@
+dependencies {
+    implementation project(':train-ticketing-domain')
+    implementation project(':train-ticketing-infrastructure')
+}

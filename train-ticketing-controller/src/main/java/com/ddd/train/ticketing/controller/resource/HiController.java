@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class HiController {
 
-    private final EventAppService service;
+    private final EventAppService eventAppService;
 
     @GetMapping("/ping")
     public ResponseEntity<String> ping() {
 
-        return ResponseEntity.ok(service.sayHi("XXX"));
+        return ResponseEntity.ok(eventAppService.sayHi("KIM"));
     }
 }
