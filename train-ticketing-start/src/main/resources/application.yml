@@ -2,3 +2,18 @@ server:
   servlet:
     contextPath: /api/advisors
   port: 8080
+
+
+resilience4j:
+  ratelimiter:
+    instances:
+      backendA:
+        limitForPeriod: 2
+        limitRefreshPeriod: 10s
+        timeoutDuration: 0
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 100
+      backendB:
+        limitForPeriod: 5
+        limitRefreshPeriod: 500ms
+        timeoutDuration: 3s
